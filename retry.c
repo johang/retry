@@ -88,7 +88,7 @@ parse_opts(int argc, char **argv)
 	opt_retries = strtol(argv[optind++], NULL, 10);
 
 	/* Build a string of all commands and command arguments */
-	int off = 0;
+	size_t off = 0;
 	for (; optind < argc; optind++) {
 		strncat(&opt_cmd[off], argv[optind], sizeof (opt_cmd) - off - 1);
 		off += strlen(argv[optind]);
